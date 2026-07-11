@@ -1,17 +1,31 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="ar" dir="rtl" class="h-full bg-slate-50">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>بوابة الناشر | HTML.COM.LY</title>
-  <link rel="stylesheet" href="/src/input.css">
-  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="./src/input.css">
+  <link rel="manifest" href="./manifest.json">
   <meta name="theme-color" content="#0f172a">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN Fallback to ensure instant professional rendering -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Cairo', 'sans-serif'],
+            jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
   <style>
     body {
       font-family: 'Cairo', sans-serif;
@@ -26,9 +40,9 @@
   <!-- Top Connection Banner -->
   <div class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white text-xs sm:text-sm font-medium py-2 px-4 text-center shadow-md flex items-center justify-center gap-2 transition-all duration-300 hover:opacity-95">
     <span>🔗 هل تبحث عن المنصة الرئيسية؟</span>
-    <a href="https://a.html.com.ly" target="_blank" rel="noopener noreferrer" class="underline font-bold hover:text-yellow-200 transition-colors inline-flex items-center gap-1">
+    <a href="https://a.html.com.ly" target="blank" rel="noopener noreferrer" class="underline font-bold hover:text-yellow-200 transition-colors inline-flex items-center gap-1">
       اضغط هنا لزيارة موقع a.html.com.ly الافتراضي
-      <svg class="w-4 h-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+      <svg class="w-4 h-4 inline" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
     </a>
   </div>
 
@@ -46,7 +60,7 @@
       </div>
       <div class="flex items-center gap-3">
         <a href="https://wa.me/218944119965" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 transition-all duration-300 shadow-lg shadow-emerald-600/20 hover:scale-105">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <svg class="w-5 h-5 fill-current" width="20" height="20" viewBox="0 0 24 24">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966C16.59 1.976 14.113.953 11.487.953c-5.44 0-9.866 4.372-9.87 9.802 0 1.714.463 3.39 1.337 4.888l-.997 3.641 3.73-.967z"/>
           </svg>
           <span class="hidden sm:inline">تواصل واتساب</span>
@@ -62,442 +76,4 @@
       <span class="px-3 py-1 bg-indigo-500/10 text-indigo-300 rounded-full text-xs font-semibold border border-indigo-500/20 inline-block mb-4">المستودع الرديف والمنصة المتكاملة</span>
       <h2 class="text-3xl sm:text-5xl font-black mb-4 leading-tight">بوابة المعلومات والسياسات الرسمية</h2>
       <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-        مرحباً بك في بوابة الناشر التابعة لـ <span class="text-indigo-400 font-bold">HTML.COM.LY</span>. هنا تجد دليل العمل الشامل، سياسة الخصوصية المعتمدة لملحقات المتصفح، ووسائل الاتصال المباشرة بنا.
-      </p>
-    </div>
-  </section>
-
-  <!-- Main Grid Navigation (Morb'at) -->
-  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="cards-grid">
-      
-      <!-- Card 1: About Us -->
-      <button onclick="openSection('about')" class="group text-right bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-indigo-500 transition-all duration-300 flex flex-col justify-between h-64 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-24 h-24 bg-indigo-50 rounded-br-full -z-10 group-hover:bg-indigo-100/70 transition-colors"></div>
-        <div class="flex justify-between items-start w-full">
-          <div class="w-14 h-14 rounded-2xl bg-indigo-500 text-white flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-          </div>
-          <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-full">من نحن</span>
-        </div>
-        <div class="mt-6">
-          <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">من نحن</h3>
-          <p class="text-slate-500 text-sm line-clamp-2 leading-relaxed">تعرف على رؤيتنا وأهدافنا في تقديم حلول برمجية متكاملة للويب والناشرين.</p>
-        </div>
-      </button>
-
-      <!-- Card 2: Privacy Policy -->
-      <button onclick="openSection('privacy')" class="group text-right bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-purple-500 transition-all duration-300 flex flex-col justify-between h-64 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-24 h-24 bg-purple-50 rounded-br-full -z-10 group-hover:bg-purple-100/70 transition-colors"></div>
-        <div class="flex justify-between items-start w-full">
-          <div class="w-14 h-14 rounded-2xl bg-purple-500 text-white flex items-center justify-center shadow-lg shadow-purple-500/20 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-          </div>
-          <span class="text-xs font-bold text-purple-600 bg-purple-50 px-2.5 py-1 rounded-full">الخصوصية المعتمدة</span>
-        </div>
-        <div class="mt-6">
-          <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-purple-600 transition-colors">سياسة الخصوصية</h3>
-          <p class="text-slate-500 text-sm line-clamp-2 leading-relaxed">الوثيقة الرسمية لسياسة الخصوصية الخاصة بإضافات متصفح جوجل كروم وموقعنا.</p>
-        </div>
-      </button>
-
-      <!-- Card 3: Contact Us -->
-      <button onclick="openSection('contact')" class="group text-right bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-emerald-500 transition-all duration-300 flex flex-col justify-between h-64 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-24 h-24 bg-emerald-50 rounded-br-full -z-10 group-hover:bg-emerald-100/70 transition-colors"></div>
-        <div class="flex justify-between items-start w-full">
-          <div class="w-14 h-14 rounded-2xl bg-emerald-500 text-white flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-          </div>
-          <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full">اتصل بنا</span>
-        </div>
-        <div class="mt-6">
-          <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">اتصل بنا</h3>
-          <p class="text-slate-500 text-sm line-clamp-2 leading-relaxed">قنوات التواصل المباشرة والدعم الفني الفوري عبر الواتساب والهاتف.</p>
-        </div>
-      </button>
-
-      <!-- Card 4: Publisher Guide (10 Articles) -->
-      <button onclick="openSection('articles')" class="group text-right bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-amber-500 transition-all duration-300 flex flex-col justify-between h-64 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-24 h-24 bg-amber-50 rounded-br-full -z-10 group-hover:bg-amber-100/70 transition-colors"></div>
-        <div class="flex justify-between items-start w-full">
-          <div class="w-14 h-14 rounded-2xl bg-amber-500 text-white flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-          </div>
-          <span class="text-xs font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full">دليل العمل</span>
-        </div>
-        <div class="mt-6">
-          <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">دليل الناشر (10 مقالات)</h3>
-          <p class="text-slate-500 text-sm line-clamp-2 leading-relaxed">10 مقالات قصيرة باللغة الإنجليزية تشرح فكرة الموقع وطريقة العمل بالتفصيل.</p>
-        </div>
-      </button>
-
-    </div>
-
-    <!-- Dynamic Content Section (Hidden by default) -->
-    <div id="content-viewer" class="hidden mt-8 bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden transition-all duration-500 transform translate-y-4 opacity-0">
-      
-      <!-- Viewer Header -->
-      <div class="bg-slate-900 text-white px-6 py-4 sm:px-8 sm:py-6 flex items-center justify-between border-b border-slate-800">
-        <div class="flex items-center gap-3">
-          <div id="viewer-icon-container" class="w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold">
-            <!-- Dynamic Icon -->
-          </div>
-          <div>
-            <h3 id="viewer-title" class="text-lg sm:text-xl font-bold">عنوان الصفحة</h3>
-            <p id="viewer-subtitle" class="text-xs text-slate-400">القسم الفرعي</p>
-          </div>
-        </div>
-        <button onclick="closeSection()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white p-2.5 rounded-xl transition-all duration-200 flex items-center gap-1 text-sm">
-          <span>إغلاق</span>
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-        </button>
-      </div>
-
-      <!-- Viewer Body -->
-      <div class="p-6 sm:p-10" id="viewer-body">
-        <!-- Dynamic Content Injected Here -->
-      </div>
-
-      <!-- Viewer Footer -->
-      <div class="bg-slate-50 px-6 py-4 sm:px-8 border-t border-slate-100 flex justify-between items-center">
-        <span class="text-xs text-slate-400">بوابة الناشر المعتمدة © 2025</span>
-        <button onclick="closeSection()" class="text-sm font-bold text-indigo-600 hover:text-indigo-800 transition-colors">العودة للرئيسية ↑</button>
-      </div>
-
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-slate-900 text-white border-t border-slate-800 mt-auto">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <div class="flex items-center gap-2 mb-4">
-            <div class="w-8 h-8 rounded-lg bg-indigo-500 flex items-center justify-center text-white font-bold">H</div>
-            <span class="text-lg font-bold">HTML.COM.LY</span>
-          </div>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            منصة متكاملة لتقديم الخدمات البرمجية وحلول النشر الرقمي المتقدمة.
-          </p>
-        </div>
-        <div>
-          <h4 class="text-sm font-bold text-indigo-400 uppercase tracking-wider mb-4">روابط سريعة</h4>
-          <ul class="space-y-2 text-sm text-slate-300">
-            <li><a href="https://a.html.com.ly" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">الموقع الرئيسي الافتراضي 🔗</a></li>
-            <li><button onclick="openSection('privacy')" class="hover:text-white transition-colors text-right">سياسة الخصوصية المعتمدة</button></li>
-            <li><button onclick="openSection('articles')" class="hover:text-white transition-colors text-right">دليل الناشر بالإنجليزية</button></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-sm font-bold text-indigo-400 uppercase tracking-wider mb-4">الدعم الفني والاتصال</h4>
-          <p class="text-slate-300 text-sm mb-4">لأي استفسارات بخصوص إضافات جوجل كروم أو حقوق النشر، يرجى التواصل مباشرة:</p>
-          <a href="https://wa.me/218944119965" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-bold text-sm transition-colors">
-            <span>واتساب: 00218944119965</span>
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966C16.59 1.976 14.113.953 11.487.953c-5.44 0-9.866 4.372-9.87 9.802 0 1.714.463 3.39 1.337 4.888l-.997 3.641 3.73-.967z"/></svg>
-          </a>
-        </div>
-      </div>
-      <div class="border-t border-slate-800 mt-8 pt-8 text-center text-xs text-slate-500">
-        <p>جميع الحقوق محفوظة © 2025 لموقع HTML.COM.LY والناشر المعتمد.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Static Content Templates (Hidden) -->
-  <div id="templates" class="hidden">
-    
-    <!-- Template: About -->
-    <div id="temp-about">
-      <div class="prose max-w-none text-slate-700 leading-relaxed space-y-6">
-        <p class="text-lg font-semibold text-slate-900">مرحباً بكم في منصة الناشر المعتمدة التابعة لـ HTML.COM.LY</p>
-        <p>
-          نحن مؤسسة تقنية متخصصة في تطوير حلول الويب المتقدمة، إضافات المتصفحات الذكية، وأدوات تسهيل النشر الرقمي. نسعى جاهدين لبناء جسور تقنية تمكن المستخدمين والناشرين من إدارة محتواهم الرقمي بأمان وسهولة فائقة.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
-            <h4 class="font-bold text-indigo-600 mb-2">رؤيتنا</h4>
-            <p class="text-sm">تبسيط النشر الرقمي وتوفير أدوات آمنة وموثوقة بنسبة 100% لجميع متصفحي الويب والناشرين المحترفين.</p>
-          </div>
-          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
-            <h4 class="font-bold text-purple-600 mb-2">أهدافنا</h4>
-            <p class="text-sm">تطوير إضافات متصفح (Chrome Extensions) متوافقة تماماً مع معايير الأمان العالمية وحماية خصوصية المستخدمين بشكل صارم.</p>
-          </div>
-        </div>
-        <p>
-          يرتبط هذا المستودع بشكل مباشر بالنطاق الفرعي والموقع الرئيسي <a href="https://a.html.com.ly" target="_blank" class="text-indigo-600 underline font-bold">a.html.com.ly</a> لضمان تكامل الخدمات وتوفير مرجعية قانونية وتقنية موحدة لجميع منتجاتنا البرمجية.
-        </p>
-      </div>
-    </div>
-
-    <!-- Template: Privacy Policy -->
-    <div id="temp-privacy">
-      <div class="prose max-w-none text-slate-700 leading-relaxed space-y-6">
-        <div class="bg-amber-50 border-r-4 border-amber-500 p-4 rounded-l-xl mb-6">
-          <p class="text-sm text-amber-800 font-medium">
-            <strong>تنويه هام لشركة Google ومراجعي إضافات Chrome Web Store:</strong> تم إعداد هذه السياسة لتلبية كافة متطلبات الأمان والخصوصية وحماية بيانات المستخدمين الخاصة بإضافاتنا البرمجية المرتبطة بنطاقنا المعتمد <strong>html.com.ly</strong>.
-          </p>
-        </div>
-        
-        <h4 class="text-xl font-bold text-slate-900 border-b pb-2">1. مقدمة عامة</h4>
-        <p>
-          نحن في <strong>HTML.COM.LY Publisher</strong> نلتزم بأقصى درجات حماية البيانات الشخصية والخصوصية لمستخدمي موقعنا وإضافات متصفح جوجل كروم التابعة لنا. توضح هذه الوثيقة نوعية البيانات التي نجمعها، وكيفية استخدامها، والتدابير الصارمة التي نتخذها لضمان سلامتها.
-        </p>
-
-        <h4 class="text-xl font-bold text-slate-900 border-b pb-2">2. البيانات التي يتم جمعها بواسطة إضافات Chrome</h4>
-        <p>
-          إن إضافاتنا البرمجية مصممة لتعمل بأقل قدر ممكن من الصلاحيات (Principle of Least Privilege). 
-        </p>
-        <ul class="list-disc list-inside space-y-2 pr-4">
-          <li><strong>البيانات الشخصية:</strong> لا تقوم إضافاتنا بجمع أي بيانات شخصية مثل الأسماء، العناوين، كلمات المرور، أو معلومات الدفع.</li>
-          <li><strong>بيانات التصفح:</strong> لا نقوم بتتبع سجل التصفح الخاص بك أو بيعه لأي جهات خارجية على الإطلاق.</li>
-          <li><strong>الصلاحيات المطلوبة:</strong> أي صلاحية تطلبها الإضافة (مثل الوصول إلى علامات التبويب النشطة) هي لغرض تشغيل الميزة الأساسية للإضافة فقط (Single Purpose Rule).</li>
-        </ul>
-
-        <h4 class="text-xl font-bold text-slate-900 border-b pb-2">3. أمن البيانات ونقلها</h4>
-        <p>
-          يتم تشفير جميع الاتصالات بين الإضافة وخوادمنا باستخدام بروتوكول <strong>HTTPS</strong> الآمن. لا يتم تخزين أي بيانات حساسة على خوادم خارجية، ويتم معالجة العمليات محلياً داخل المتصفح لضمان أعلى مستويات الأمان.
-        </p>
-
-        <h4 class="text-xl font-bold text-slate-900 border-b pb-2">4. مشاركة البيانات مع أطراف ثالثة</h4>
-        <p class="font-semibold text-red-600">
-          نحن نعلن بشكل قاطع وصريح: لا نقوم ببيع، تأجير، أو مشاركة أي بيانات مستخدم مع أي جهات إعلانية أو أطراف ثالثة لأي غرض كان.
-        </p>
-
-        <h4 class="text-xl font-bold text-slate-900 border-b pb-2">5. التحديثات والتواصل</h4>
-        <p>
-          قد نقوم بتحديث سياسة الخصوصية هذه لمواكبة التغييرات القانونية أو التقنية. في حال وجود أي استفسار أو شكوى بخصوص الخصوصية، يرجى الاتصال بنا فوراً عبر رقم الواتساب المعتمد: <a href="https://wa.me/218944119965" class="text-indigo-600 font-bold underline">00218944119965</a>.
-        </p>
-      </div>
-    </div>
-
-    <!-- Template: Contact -->
-    <div id="temp-contact">
-      <div class="text-center max-w-xl mx-auto py-6">
-        <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner">
-          <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-        </div>
-        <h4 class="text-2xl font-extrabold text-slate-900 mb-2">يسعدنا تواصلك معنا في أي وقت</h4>
-        <p class="text-slate-500 mb-8">فريق الدعم الفني لـ HTML.COM.LY جاهز للرد على استفساراتكم بخصوص النشر، الشراكات، أو إضافات المتصفح.</p>
-        
-        <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 mb-8 text-right space-y-4">
-          <div class="flex items-center justify-between border-b pb-3 border-slate-200">
-            <span class="text-slate-500 text-sm">رقم الواتساب المباشر:</span>
-            <span class="font-mono font-bold text-slate-900 text-lg" dir="ltr">+218 94 411 9965</span>
-          </div>
-          <div class="flex items-center justify-between border-b pb-3 border-slate-200">
-            <span class="text-slate-500 text-sm">البريد الإلكتروني للدعم:</span>
-            <span class="font-mono font-bold text-slate-900">support@html.com.ly</span>
-          </div>
-          <div class="flex items-center justify-between">
-            <span class="text-slate-500 text-sm">ساعات العمل:</span>
-            <span class="font-bold text-indigo-600">على مدار 24 ساعة عبر الواتساب</span>
-          </div>
-        </div>
-
-        <a href="https://wa.me/218944119965" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-2xl shadow-lg shadow-emerald-600/30 transition-all duration-300 hover:scale-105">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966C16.59 1.976 14.113.953 11.487.953c-5.44 0-9.866 4.372-9.87 9.802 0 1.714.463 3.39 1.337 4.888l-.997 3.641 3.73-.967z"/></svg>
-          <span>ابدأ محادثة واتساب الآن</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Template: Articles (10 English Articles) -->
-    <div id="temp-articles">
-      <div class="space-y-8 en-font" dir="ltr">
-        <div class="border-b pb-4 mb-6">
-          <h4 class="text-2xl font-extrabold text-slate-900">HTML.COM.LY Publisher Guide</h4>
-          <p class="text-slate-500 text-sm mt-1">10 short articles explaining our concept, workflow, and how to maximize your publishing potential.</p>
-        </div>
-
-        <div class="grid grid-cols-1 gap-6">
-          
-          <!-- Article 1 -->
-          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-amber-300 transition-colors">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="text-3xl">🚀</span>
-              <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Article 1 • HTML.COM.LY Publisher</span>
-            </div>
-            <h5 class="text-lg font-bold text-slate-900 mb-2">Welcome to the Publisher Platform</h5>
-            <p class="text-slate-600 text-sm leading-relaxed">Welcome to HTML.COM.LY Publisher, your ultimate companion for modern web publishing. Our platform is designed to bridge the gap between complex web development and seamless content distribution, allowing creators to focus entirely on what they do best: writing and sharing knowledge.</p>
-          </div>
-
-          <!-- Article 2 -->
-          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-amber-300 transition-colors">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="text-3xl">💡</span>
-              <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Article 2 • HTML.COM.LY Publisher</span>
-            </div>
-            <h5 class="text-lg font-bold text-slate-900 mb-2">Understanding the Core Concept</h5>
-            <p class="text-slate-600 text-sm leading-relaxed">The core philosophy of HTML.COM.LY Publisher revolves around simplicity and speed. By utilizing lightweight static structures and powerful browser integrations, we ensure that your content loads instantly for users worldwide, regardless of their connection speed.</p>
-          </div>
-
-          <!-- Article 3 -->
-          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-amber-300 transition-colors">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="text-3xl">🛠️</span>
-              <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Article 3 • HTML.COM.LY Publisher</span>
-            </div>
-            <h5 class="text-lg font-bold text-slate-900 mb-2">How to Get Started</h5>
-            <p class="text-slate-600 text-sm leading-relaxed">Getting started is incredibly simple. First, explore our main portal at a.html.com.ly to set up your profile. Once registered, you can use our dedicated browser extensions to draft, format, and publish articles directly to the web with a single click.</p>
-          </div>
-
-          <!-- Article 4 -->
-          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-amber-300 transition-colors">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="text-3xl">📈</span>
-              <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Article 4 • HTML.COM.LY Publisher</span>
-            </div>
-            <h5 class="text-lg font-bold text-slate-900 mb-2">Maximizing Your Reach</h5>
-            <p class="text-slate-600 text-sm leading-relaxed">To reach a wider audience, make sure to utilize relevant tags and clear headings. HTML.COM.LY Publisher automatically optimizes your articles for search engines (SEO), ensuring high visibility on Google and other major search platforms.</p>
-          </div>
-
-          <!-- Article 5 -->
-          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-amber-300 transition-colors">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="text-3xl">✍️</span>
-              <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Article 5 • HTML.COM.LY Publisher</span>
-            </div>
-            <h5 class="text-lg font-bold text-slate-900 mb-2">Content Guidelines for Publishers</h5>
-            <p class="text-slate-600 text-sm leading-relaxed">We maintain high standards of quality. All publishers must ensure their content is original, informative, and free of misleading information. High-quality formatting with clear bullet points and images is highly encouraged.</p>
-          </div>
-
-          <!-- Article 6 -->
-          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-amber-300 transition-colors">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="text-3xl">🔌</span>
-              <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Article 6 • HTML.COM.LY Publisher</span>
-            </div>
-            <h5 class="text-lg font-bold text-slate-900 mb-2">Integrating the Chrome Extension</h5>
-            <p class="text-slate-600 text-sm leading-relaxed">Our official Chrome Extension is the heart of the publishing workflow. It allows you to clip research, save drafts, and publish directly. Rest assured, our extension complies fully with Google's strict privacy and single-purpose policies.</p>
-          </div>
-
-          <!-- Article 7 -->
-          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-amber-300 transition-colors">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="text-3xl">📊</span>
-              <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Article 7 • HTML.COM.LY Publisher</span>
-            </div>
-            <h5 class="text-lg font-bold text-slate-900 mb-2">Analyzing Your Performance</h5>
-            <p class="text-slate-600 text-sm leading-relaxed">Track your success easily. The publisher dashboard provides real-time analytics on page views, reading time, and user engagement, helping you understand what topics resonate most with your audience.</p>
-          </div>
-
-          <!-- Article 8 -->
-          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-amber-300 transition-colors">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="text-3xl">💰</span>
-              <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Article 8 • HTML.COM.LY Publisher</span>
-            </div>
-            <h5 class="text-lg font-bold text-slate-900 mb-2">Monetization and Rewards</h5>
-            <p class="text-slate-600 text-sm leading-relaxed">HTML.COM.LY Publisher offers various ways to monetize your high-performing content. From premium subscription models to integrated ad networks, we ensure that quality publishers are fairly rewarded for their efforts.</p>
-          </div>
-
-          <!-- Article 9 -->
-          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-amber-300 transition-colors">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="text-3xl">🤝</span>
-              <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Article 9 • HTML.COM.LY Publisher</span>
-            </div>
-            <h5 class="text-lg font-bold text-slate-900 mb-2">Community and Collaboration</h5>
-            <p class="text-slate-600 text-sm leading-relaxed">You are not alone. Join our vibrant community of publishers to share tips, collaborate on joint articles, and receive direct feedback from experienced mentors in your field.</p>
-          </div>
-
-          <!-- Article 10 -->
-          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-amber-300 transition-colors">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="text-3xl">🗺️</span>
-              <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Article 10 • HTML.COM.LY Publisher</span>
-            </div>
-            <h5 class="text-lg font-bold text-slate-900 mb-2">Future Roadmap and Updates</h5>
-            <p class="text-slate-600 text-sm leading-relaxed">We are constantly evolving. Our roadmap includes AI-assisted writing tools, deeper integration with social platforms, and enhanced offline capabilities to make publishing on HTML.COM.LY even more powerful.</p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- JavaScript for dynamic SPA behavior -->
-  <script>
-    const sections = {
-      about: {
-        title: 'من نحن',
-        subtitle: 'رؤيتنا وأهدافنا البرمجية والتقنية',
-        colorClass: 'bg-indigo-500',
-        icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`,
-        templateId: 'temp-about'
-      },
-      privacy: {
-        title: 'سياسة الخصوصية المعتمدة',
-        subtitle: 'الوثيقة الرسمية لحماية البيانات وإضافات Chrome',
-        colorClass: 'bg-purple-500',
-        icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>`,
-        templateId: 'temp-privacy'
-      },
-      contact: {
-        title: 'اتصل بنا المباشر',
-        subtitle: 'تواصل فوري عبر الواتساب والدعم الفني المعتمد',
-        colorClass: 'bg-emerald-500',
-        icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>`,
-        templateId: 'temp-contact'
-      },
-      articles: {
-        title: 'HTML.COM.LY Publisher Guide',
-        subtitle: '10 Short English Articles explaining our concept',
-        colorClass: 'bg-amber-500',
-        icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>`,
-        templateId: 'temp-articles'
-      }
-    };
-
-    function openSection(key) {
-      const section = sections[key];
-      if (!section) return;
-
-      // Update Browser Title
-      document.title = `${section.title} | بوابة الناشر HTML.COM.LY`;
-
-      // Set Viewer Content
-      document.getElementById('viewer-title').innerText = section.title;
-      document.getElementById('viewer-subtitle').innerText = section.subtitle;
-      
-      const iconContainer = document.getElementById('viewer-icon-container');
-      iconContainer.className = `w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold ${section.colorClass}`;
-      iconContainer.innerHTML = section.icon;
-
-      const templateContent = document.getElementById(section.templateId).innerHTML;
-      document.getElementById('viewer-body').innerHTML = templateContent;
-
-      // Show Viewer with smooth transition
-      const viewer = document.getElementById('content-viewer');
-      viewer.classList.remove('hidden');
-      setTimeout(() => {
-        viewer.classList.remove('translate-y-4', 'opacity-0');
-        viewer.classList.add('translate-y-0', 'opacity-100');
-        viewer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 50);
-    }
-
-    function closeSection() {
-      // Reset Browser Title
-      document.title = 'بوابة الناشر | HTML.COM.LY';
-
-      const viewer = document.getElementById('content-viewer');
-      viewer.classList.add('translate-y-4', 'opacity-0');
-      viewer.classList.remove('translate-y-0', 'opacity-100');
-      setTimeout(() => {
-        viewer.classList.add('hidden');
-      }, 300);
-    }
-
-    // Register Service Worker
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then(reg => console.log('Service Worker registered successfully!', reg))
-          .catch(err => console.log('Service Worker registration failed:', err));
-      });
-    }
-  </script>
-</body>
-</html>
+        مرحباً بك في بوابة الناشر التابعة لـ <span class=
